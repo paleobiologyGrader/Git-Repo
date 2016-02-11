@@ -132,12 +132,12 @@ No, this would then make the family a paraphyletic group and the common trait th
 Group | Species | Classification
 ----- | ----- | -----
 Group 1	| Species A, B, C. | Paraphyletic	
-Group 2	| Species C, D, E. | <strike>Monophyletic</strike> polyphyletic
+Group 2	| Species C, D, E. | Monophyletic
 Group 3	| Species C and D. | <strike>Polyphyletic</strike> paraphyletic	
 Group 4	| Species A and B. | Monophyletic	
 Group 5	| Species B, D, E. | <strike>Paraphyletic</strike> polyphyletic	
 
-> - 0.75 points
+> - 0.5 points
 
 ## Part 4
 
