@@ -1,0 +1,78 @@
+Part I
+
+1) How many unique genera are in the Miocene,Early Jurasic, Late Cretaceous, and Pennsylvanian epochs (not total, each)? What code did you use to find out?
+>rowSums(PresencePBDB)
+# Miocene=602, Early Jurasic=84, Late Cretaceous=375, Pennsylvanian=133
+
+2) How many geologic epochs in general are in this dataset? What code did you use to find out?
+There are 29 geologic epochs
+>dim(PresencePBDB)
+#returns dimensions of 29 and 902
+
+3) Which epochs contain specimens of the genus Mytilus? What code did you find out.
+>PresencePBDB[,"Mytilus"]
+#Mytilus is found in the Pridoli, Early Devonian, Cisuralian, Late Jurassic, Eocene, Late Cretaceous, Early Cretaceous, Middle Jurassic, Paleocene, Oligocene, Miocene, Early Jurassic, Pleistocene, Middle Triassic, Late Triassic, Pliocene, and Early Triassic
+
+4) Look at the epochs in the geologic timescale. Using your answer to question 3, in which epochs can we infer that Mytilus was present, even though we have no record of them in the Paleobiology Database? How did you deduce this?
+They are probably present in the Middle and Late Devonian epochs and it is also probably in the Late Triassic. If there are specimens found in the surrounding time periods the species is very unlikely to die out to a point where there are no identifiable fossils from these periods.
+
+Part II
+1)	Using your own custom R code, find the Jaccard similarity of the Pleistocene and Miocene "samples" in your PresencePBDB matrix. 
+
+>VectorM<- c(PresencePBDB[“Miocene”,])
+>VectorP<- c(PresencePBDB[“Pleistocene”,])
+>MatrixMP<- VectorM+VectorP
+>JaccardMP<- table(MatrixMP)
+>FinalJaccardMP<- JaccardMP[“2”]/(JaccardMP[“2”]+JaccardMP[“1”])
+#returns a value of 0.8276423
+2)	How can you convert your similarity index into a distance?
+>1-“FinalJaccardMP” 
+#This calculates the Jaccard distance of 0.1723577
+3)	Install and load the vegan package into R. Read the help file for the vegdist function - ?vegdist or help(vegdist). Again, calculate the jaccard distance of the "Miocene" and "Pleistocene" samples of PresencePBDB, but this time use the vegdist( ) function. This should be an identical answer to what you got in question 2.
+>vegdist(PresencePBDB[c (”Miocene”, “Pleistocene”),], “jaccard”)
+#returns a distance of 0.1723577
+4)	Using the vegdist( ) function. Calculate the Jaccard distances of all the following epochs in PresencePBDB - the "Pleistocene", "Pliocene", "Miocene", "Oligocene", "Eocene", "Paleocene". What code did you use? Which two epochs are the most dissimilar?
+> vegdist(PresencePBDB[c("Miocene", "Pleistocene", "Pliocene", "Oligocene", "Eocene", "Paleocene"),], "jaccard")
+#Pleistocene and Paleocene are most dissimilar with a distance of 0.44356121
+Part III
+
+1)	Create a subset of the PresencePBDB matrix which contains just the following rows - "Pliocene", "Oligocene", "Paleocene", "Early Cretaceous", "Late Jurassic", and "Middle Jurassic". Name this subset RandomEpochs. Show your code.
+> RandomEpochs<- PresencePBDB[c("Pliocene", "Oligocene", "Paleocene", "Early Cretaceous", "Late Jurassic", "Middle Jurassic"),]
+2)	Using vegdist( ) find the dissimilarities of all the epochs in Random Epochs. Show your code.
+> vegdist(RandomEpochs, "jaccard")
+                  Pliocene Oligocene Paleocene Early Cretaceous Late Jurassic
+Oligocene        0.1900000                                                   
+Paleocene        0.3781646 0.4094617                                         
+Early Cretaceous 0.7459138 0.7476341 0.6400742                               
+Late Jurassic    0.8650675 0.8651685 0.7902622        0.4703947              
+Middle Jurassic  0.8850746 0.8812199 0.7931689        0.4883721     0.2962963
+3)	Find the two epochs that are the most dissimilar and make them the poles. Now, using the dissimilarities, order (ordinate) the remaining epochs based on their similarity to the poles. State the order of your inferred gradient.
+Pliocene < Oligocene < Paleocene < Early Cretaceous < Late Jurassic <Middle Jurassic
+#distance between Pliocene and Middle Jurassic is 0.8850746
+4)	Can you deduce what "variable" is controlling this gradient (e.g., temperature, water depth, geographic distance)? [Hint: Check the geologic timescale]. State your reasoning.
+The variable applied to this gradient seems to be climatic warming.  Starting in the Pliocene epoch with “icehouse conditions” there is a trend of warming to a general tropical climate and increasing flowering diversity.
+5). There is a relatively high dissimilarity between the Early Cretaceous and Paleocene epochs. Can you hypothesize why this is? Google these epochs if you need to.
+The mass extinction that occurred at the end of the Cretaceous period probably changed the climate of the earth to an extent that available data finds a large difference in climate between the two epochs.
+
+Part IV
+
+1)	Download a dataset from the paleobioogy database of all Ordovician aged animals into R, and name the object Ordovician. This may take a few minutes. What R code did you use?
+> Datapart4<-downloadPBDB(Taxa=c("Animalia"),StartInterval="Ordovician",StopInterval="Ordovician")
+2) Clean up the poorly resolved genus names. What function/code did you use?
+> Datapart4<- cleanGenus(Datapart4)
+> Epochs<-downloadTime(Timescale="international epochs")
+> Ordovician<-constrainAges(Ordovician,Epochs)
+
+2)	Turn your object Ordovician into a community matrix of samples by genera, where the samples are different geoplate codes. Geoplate codes denote different ancient paleocontinents - i.e., your community matrix will list which genera were present in which ancient paleocontinent. Cull this matrix so that each sample has a minimum of 25 taxa and each taxon occurs in at least two samples. Show your code.
+> Ordovician <-presenceMatrix(Ordovician, SampleDefinition="geoplate")
+> Ordovician <-cullMatrix(Ordovician, minOccurrences=2, minDiversity=25)
+4) Perform a DCA on your new community matrix. Analyze your new DCA with a plot. Do you think that the orientation of samples along either axis 1 or axis 2 is related to the average latitude or longitude of each plate in question? Explain how you figured this out. Show your code.
+> OrdovicianDCA<- decorana(Ordovician, ira=0)
+> plot(OrdovicianDCA, display="sites")
+>mean(Datapart4[which(Datapart4[,”geoplate”]==101), “paleolng”])
+>mean(Datapart4[which(Datapart4[,”geoplate”]==101), “paleolat”])
+> mean(Datapart4[which(Datapart4[,"geoplate"]==806), "paleolat"])
+> mean(Datapart4[which(Datapart4[,"geoplate"]==806), "paleolng"])
+
+
+#I think the samples are organized by average longitude on axis 2 and average latitude on axis 1 because geoplate 806 is found in the upper left corner of the plot, indicating that the average longitude is a higher value than the average latitude which is the case when you compute the mean paleolatitude and paleolongitude. 
