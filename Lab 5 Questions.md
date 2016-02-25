@@ -132,7 +132,7 @@ Standardizing gives a plot that can be fitted with a linear trend line whereas t
 3)	Do you believe that there is any evidence in these analyses to support the idea that bivalves outcompeted brachiopods over time? Explain your reasoning.
 According to both plots it does not appear that bivalves outcompeted brachiopods. After looking at the unstandardized data it appears that bivalves outcompete brachiopods because high values of bivalves correspond to low values of brachiopods but high levels of brachiopods appear to correspond to lower values of bivalve richness.  Since this data is not as reliably fit by a trend line it is better to look at the standardized data for this relationship. Looking at the standardized plot, there is no evidence of either species outcompeting the other because of the linear trend.  
 
-<a href="url"><img src="/Lab5Plots.pdf" align="center" height="500" width="500" ></a>
+<a href="url"><img src="https://github.com/jncarlson2/Git-Repo/blob/master/Lab5Plots.pdf" align="center" height="500" width="500" ></a>
 
-<a href="url"><img src="/Lab5Plots2.pdf" align="center" height="500" width="500" ></a>
+<a href="url"><img src="https://github.com/jncarlson2/Git-Repo/blob/master/Lab5Plots.pdf" align="center" height="500" width="500" ></a>
 
