@@ -1,37 +1,66 @@
-##Part 1
+## Part 1
+
 1)	What is Bivalve generic richness in the Miocene? What code did you use to find out?
+
+````R
 > table(BivalveAbundance["Miocene",])
 #returns a table of number of genera with certain number of occurrences. There are 1639 genera with values of 0 in the Miocene.
 > sum(table(BivalveAbundance["Miocene",]))
 #returns 2273. This is the total number of genera reported in the Miocene
 >2273-1639
 #There are 634 total for genera richness 
+````
+
 2)	What is the Berger-Parker Index of Brachiopods genera in the Pliocene? What code did you use to find out? [Hint: the function max( ) may help you).
+
+````R
 > max(BrachiopodAbundance["Pliocene",])
 #22
 > sum(table(BrachiopodAbundance["Pliocene",]))
 #3107
 >22/3107
 # 0.007080785
+````
+
 3)	What is the Gini-Simpson Index of Brachiopods during the Late Ordovician? What code did you use to find out?
+
+````R
 > sum(BrachiopodAbundance["Late Ordovician",])
 #6154
 > 1- sum(((BrachiopodAbundance["Late Ordovician",])/6154)^2)
  #0.9784588
+````
+
 4)	What is the Shannon's Entropy of Bivalves during the Late Cretaceous? What code did you use to find out?
+
+````R
 > n<-BivalveAbundance["Late Cretaceous",which(BivalveAbundance["Late Cretaceous",]>0)]
 >N<- sum(BivalveAbundance["Late Cretaceous",])
 > -sum((n/N)*log(n/N))
 [1] 5.086654
+````
+
 5) What is the Shannon's Entropy of Bivalves during the Paleocene? What code did you use to find out?
+
+````R
 > m<-BivalveAbundance["Paleocene",which(BivalveAbundance["Paleocene",]>0)]
 > M<- sum(BivalveAbundance["Paleocene",])
 > -sum((m/M)*log(m/M))
 [1] 4.511875
+````
+
 6) What is the percent change in Shannon's Entropy between the Late Cretaceous and the Paleocene? Can you think of any major events that happened between the Late Cretaceous and Paleocene that might be relevant to biodiversity? [Hint: Use google if you don't know.] Is this reflected in this index?
+
+````R
 >4.511875/5.086654
-#returns 0.8871125 so there was about a 12% reduction in richness. This marks the difference in richness after the Cretaceous-Paleogene mass extinction event. But it is predicted that about ¾ of all species on Earth went extinct so there should have been a much greater reduction in richness than we see from the Shannon’s Entropy calculation. 
+#returns 0.8871125 so there was about a 12% reduction in richness. This marks the difference in richness after the 
+````
+
+Cretaceous-Paleogene mass extinction event. But it is predicted that about ¾ of all species on Earth went extinct so there should have been a much greater reduction in richness than we see from the Shannon’s Entropy calculation. 
+
 7) What if you use the exp( ) function to exponentiate the Shannon's Entropies you calculated in questions 4,5, and 6 (i.e., e^Shannon's Entropy)? What percent of diversity is gained/lost? Does this better reflect the change between the Late Cretaceous and Paleocene? Why or why not? 
+
+````R
 > exp(-sum((m/M)*log(m/M)))
 [1] 91.09244
 #for Paleocene
@@ -40,10 +69,11 @@
 #for Late Cretaceous
 > 91.09244/161.8474
 [1] 0.5628292
+````
 
 These values give a change in species richness of about 44% which is closer to the predicted loss of species richness due to the mass extinction.
 
-##Part 2
+## Part 2
 
 1)	Use the specnumber( ) function (also from the vegan package) to find Bivalve richness in the Miocene. What code did you use to find out?
 > specnumber(BivalveAbundance)
@@ -132,7 +162,7 @@ Standardizing gives a plot that can be fitted with a linear trend line whereas t
 3)	Do you believe that there is any evidence in these analyses to support the idea that bivalves outcompeted brachiopods over time? Explain your reasoning.
 According to both plots it does not appear that bivalves outcompeted brachiopods. After looking at the unstandardized data it appears that bivalves outcompete brachiopods because high values of bivalves correspond to low values of brachiopods but high levels of brachiopods appear to correspond to lower values of bivalve richness.  Since this data is not as reliably fit by a trend line it is better to look at the standardized data for this relationship. Looking at the standardized plot, there is no evidence of either species outcompeting the other because of the linear trend.  
 
-<a href="url"><img src="https://github.com/jncarlson2/Git-Repo/blob/master/Lab5Plots.pdf" align="center" height="500" width="500" ></a>
+<a href="url"><img src="raw.githubusercontent.com/jncarlson2/Git-Repo/master/Lab5Plots.pdf" align="center" height="500" width="500" ></a>
 
-<a href="url"><img src="https://github.com/jncarlson2/Git-Repo/blob/master/Lab5Plots.pdf" align="center" height="500" width="500" ></a>
+<a href="url"><img src="raw.githubusercontent.com/jncarlson2/Git-Repo/master/Lab5Plots.pdf" align="center" height="500" width="500" ></a>
 
