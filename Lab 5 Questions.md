@@ -164,5 +164,4 @@ According to both plots it does not appear that bivalves outcompeted brachiopods
 
 <a href="url"><img src="raw.githubusercontent.com/jncarlson2/Git-Repo/master/Lab5Plots.pdf" align="center" height="500" width="500" ></a>
 
-<a href="url"><img src="raw.githubusercontent.com/jncarlson2/Git-Repo/master/Lab5Plots.pdf" align="center" height="500" width="500" ></a>
-
+<a href="url"><img src="raw.githubusercontent.com/jncarlson2/Git-Repo/master/Lab5Plots2.pdf" align="center" height="500" width="500" ></a>
