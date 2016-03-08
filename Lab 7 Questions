@@ -1,0 +1,158 @@
+Problem Set 1
+
+1) What do the max_ma and min_ma columns of DataPBDB represent? If you do not intuitively know, you can always check the Paleobiology Database API documentation.
+These are the minimum (at least this old) and maximum (at most this old) millions of years ago that the records retuned fall under.
+
+2) What is oldest age of each genus? [Hint: Use the tapply( ) and max( ) functions we've used in previous labs]. Show the code you would use to find out.
+> tapply(DataPBDB[,"max_ma"], DataPBDB[,"genus"], max)
+
+3) What is the youngest age of each genus? [Hint: Use the tapply( ) and max( ) functions we've used in previous labs]. Show the code you would use to find out.
+> tapply(DataPBDB[,"min_ma"], DataPBDB[,"genus"], min)
+
+4) Find which genus has the most occurrences in the dataset [Hint: Use the table( ) function!]. What code did you use?
+>sort(table(DataPBDB[,"genus"]))
+#Anadara has the most occurrences (1916 occurrences)
+
+5) What is the stratigraphic range of this taxon (i.e., your answer to question 4). Show your code.
+>Anadara<- subset(DataPBDB, DataPBDB[,"genus"]=="Anadara")
+> tapply(Anadara[,"min_ma"], Anadara[,"genus"], min)
+Anadara
+      0
+> tapply(Anadara[,"max_ma"], Anadara[,"genus"], max)
+Anadara
+     66
+#The oldest Anadara is 66 million years old and the youngest Anadara is documented as a modern genus.
+
+Problem Set 2
+
+1) Qualitatively describe what is happening in the following line of code. A good answer should identify what the different arguments are for each function, and what they are used for.
+>mean(sample(Lucina[,"paleolng"],length(Lucina[,"paleolng"]),replace=TRUE))
+
+This is finding the mean of the paleolongitude data from the “Lucina” subset.  You need replace to equal TRUE and use the sample() function so that it is a random sample of paleolongitude.
+
+2) Plot a kernel density graph of ResampledMeans. Show your code. Does the distribution look approximately Gaussian? Explain why you think it does or does not.
+> plot(density(ResampledMeans))
+#This distribution does look Gaussian. It follows a bell-curve shape and the peak of the curve is around the mean for the data (~24).
+
+3) Find the mean of ResampledMeans, is it similar to the mean of the original data?
+> mean(ResampledMeans)
+[1] 24.16227
+
+4) Sort ResampledMeans from lowest to highest. [Hint: We learned how to sort a vector in Lab 6].
+>sorted<- sort(ResampledMeans)
+
+5) Now that you have sorted ResampledMeans, what is the 2.5th percentile of ResampledMeans and what is the 97.5th percentile of Resampled means. If you do not know what a percentile is, or how to calculate it, you can use google. Show your code.
+> length(sorted)
+[1] 1000
+> .025*1000
+[1] 25
+> .975*1000
+[1] 975
+> sorted[25] #lower confidence interval
+[1] 21.81826
+> sorted[975] #upper confidence interval
+[1] 26.2861
+
+6) Incidentally, these numbers (your answer to question 5) are the lower and upper confidence interval of the mean! Qualitatively explain why this is the case.
+The values that correspond to the 2.5th percentile and 97.5th percentile are the lower and upper limit values of the data set that the mean can be within.  So the 2.5th percentile limit would be the 25th element of the vector and the 97.5th percentile limit would be the 975th element of the vector so these values are the bounds for the confidence interval.
+
+Problem Set 3
+
+1) Based on the confidence intervals given above, do you think it likely or unlikely that Lucina is still alive?
+Lucina is probably still alive.  The extinction confidence interval is for the minimum Ma of this data set. There is a confidence interval of approximately 0 to -1.2 that means that 95% of the data collected is at least 0 million years old which means this genus is still alive since the extinction confidence interval is estimating an extinction event between now and some time in the future.
+
+2) Find the extinction confidence interval for the genus Dallarca. Show your code.
+> Dallarca<-subset(DataPBDB,DataPBDB[,"genus"]=="Dallarca")
+> estimateExtinction(Dallarca[,"min_ma"],0.95)
+Earliest   Latest
+ 2.58800 -3.88749
+
+
+3) A pure reading of the fossil record says that Dallarca went extinct at the end of the Pliocene Epoch. Based on its confidence interval, do you think it is possible that Dallarca is still extant (alive)?
+The end of the Pliocene epoch was about 2.58 million years ago.  Since the extinction confidence interval has a lower limit of 2.58 million years and an upper limit that corresponds to a time in the future, Dallarca is probably still extant since the likelihood of going extinct is still statistically possible.
+
+4) In this case, should we trust the confidence interval or a pure reading of the fossil record? Explain your reasoning.
+We should not trust the confidence intervals since they give estimates that reach into the future and since confidence intervals can represent a large range of time where an event happened it may not be as accurate as reading the fossil record.
+
+Problem Set 4
+
+1) State one ecological reason why this assumption is unlikely to be true.
+Fossils will not be randomly distributed through an environment because different species occupy different niches in varying richness, diversity can vary between locations, and time intervals can have varying richness due to environmental conditions.
+
+2) State one geological reason why this assumption is unlikely to be true.
+Depending on environmental conditions, the preservation of organisms can vary. Various diagenesis events can damage fossils and depending on how fast an organism gets buried, an organism can be more susceptible to conditions that will affect preservation.
+
+Problem Set 5
+
+1) How many occurrences are in DataPBDB. How many are in ExtantData? How many occurrences were lost by limiting our anaysis to only extant bivalves?
+
+> dim(DataPBDB)
+[1] 67617    26
+> dim(ExtantData)
+[1] 59096    26
+#8521 occurrences were lost 
+2) How many unique( ) genera were in DataPBDB and ExtantData, respectively. Using this information, what percentage of Cenozoic bivalves in the PBDB are still extant today.
+>unique(DataPBDB[,"genus"])
+#there are 1018 unique genera
+>unique(ExtantData[,”genus”])
+#there are 532 unique genera
+> (532/1018)*100
+[1] 52.25933
+#52% of Cenozoic bivalves are still extant
+
+3) Find the stratigraphic range of fossil occurrences for each genus in the ExtantData dataset. If you do not remember how to do this, revisit Problem Set 1 of this lab.
+>tapply(ExtantData[,"max_ma"], ExtantData[,"genus"], max)
+>tapply(ExtantData[,"min_ma"], ExtantData[,"genus"], min)
+
+4) Using your answer to question 3, find which genera in ExtantData are not extant according to the PBDB - i.e., do not have a minimum min_age of zero. Show your code.
+>MinExtant<- tapply(ExtantData[,"min_ma"], ExtantData[,"genus"], min)
+>which(MinExtant>0)
+
+
+5) Calculate the confidence intervals for the following genera (careful with your spelling!): Scorbicularia, Meiocardia, Dimya, Digitaria, Cuspidaria, Arctica, Aloides, Kurtiella, Gouldia, and Acrosterigma. Show your code. What percentage of these taxa have confidence intervals indicating that the taxon might still be extant?
+> Scorbicularia<-subset(DataPBDB,DataPBDB[,"genus"]=="Scorbicularia")
+> Meiocardia<-subset(DataPBDB,DataPBDB[,"genus"]=="Meiocardia")
+> Dimya<-subset(DataPBDB,DataPBDB[,"genus"]=="Dimya")
+> Digitaria<-subset(DataPBDB,DataPBDB[,"genus"]=="Digitaria")
+> Cuspidaria<-subset(DataPBDB,DataPBDB[,"genus"]=="Cuspidaria")
+> Arctica<-subset(DataPBDB,DataPBDB[,"genus"]=="Arctica")
+> Aloides<-subset(DataPBDB,DataPBDB[,"genus"]=="Aloides")
+> Kurtiella<-subset(DataPBDB,DataPBDB[,"genus"]=="Kurtiella")
+> Gouldia<-subset(DataPBDB,DataPBDB[,"genus"]=="Gouldia")
+> Acrosterigma<-subset(DataPBDB,DataPBDB[,"genus"]=="Acrosterigma")
+
+> estimateExtinction(Scorbicularia[,"min_ma"],0.95)
+Earliest   Latest
+     Inf      Inf
+Warning messages:
+1: In min(OccurrenceAges) : no non-missing arguments to min; returning Inf
+2: In min(OccurrenceAges) : no non-missing arguments to min; returning Inf
+> estimateExtinction(Meiocardia[,"min_ma"],0.95)
+ Earliest    Latest
+ 0.011700 -5.329574
+> estimateExtinction(Dimya[,"min_ma"],0.95)
+ Earliest    Latest
+ 0.781000 -2.054688
+> estimateExtinction(Digitaria[,"min_ma"],0.95)
+ Earliest    Latest
+ 0.781000 -3.761154
+> estimateExtinction(Cuspidaria[,"min_ma"],0.95)
+ Earliest    Latest
+2.5880000 0.7771965
+> estimateExtinction(Arctica[,"min_ma"],0.95)
+ Earliest    Latest
+ 0.011700 -1.799104
+> estimateExtinction(Aloides[,"min_ma"],0.95)
+Earliest   Latest
+   5.333     -Inf
+> estimateExtinction(Kurtiella[,"min_ma"],0.95)
+ Earliest    Latest
+  0.01170 -34.70966
+> estimateExtinction(Gouldia[,"min_ma"],0.95)
+ Earliest    Latest
+ 0.011700 -2.047386
+> estimateExtinction(Acrosterigma[,"min_ma"],0.95)
+ Earliest    Latest
+ 0.011700 -3.481128
+
+#90% of the genera confidence intervals calculated all indicate that the genera are extant. The only genera not confidently extant is Cuspidaria since the 95% confidence interval spans from 2.58Ma to 0.777Ma.
