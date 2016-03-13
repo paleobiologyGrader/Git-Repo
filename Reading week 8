@@ -1,0 +1,19 @@
+Determinants of extinction in the fossil
+
+Shanan Peters and Michael Foote
+
+Summary
+
+The authors looked at the relationship between global preservation potential and sampled occurrences of genus in marine sedimentary formations.  The reason they evaluated this relationship is because highly variable rock records can distort taxonomic origination and extinction timing locally and globally since stratigraphy sequences suggest events that affect taxa abundance happen with shifts in depositional environments.  Correlations between extinction and amount of rock in a formation were found to be weak because taxa that become extinct during a poor record time are less likely to be preserved so have less occurrences and are reported as having a higher extinction rate, or earlier date of extinction than in reality.  On the other hand, the authors then observe that areas with good rock records seem to report lower extinction rates than in reality.  Extinction rates also fluctuate depending on the level of exposure a rock experienced.  To test the correlation between extinction rate and amount of rock, the authors created a model of expected extinction rates by filtering a smooth extinction time with calibrated series of preservation.  A null model was also created by randomizing formation time series and recalculating correlations with observations. Due to various sources of error in observances, rock quantity, and model calibration, the models created are then established by the authors as a model for effects of variable preservation on short-term variability of extinction rates as opposed to being a prediction for absolute extinction rates.  The model and real data agree with each other possibly because pseudo-extinction is common in stratigraphic gaps or because sea-level changes have a greater effect on extinction than previously thought.  In conclusion, the authors argue that the correlation between predicted and observed extinction rates based on stratigraphic data means that the marine biosphere is probably more stable than previously thought and that extinction events are not as sudden as observed in certain rock records.
+
+What I liked
+
+I liked that this article was clear and concise in the research question posed and the implications for future research that were highlighted.  The authors also recognized that their model is not an end-all-be-all model and that it can only roughly be applied to large-scale evolution seen throughout the rock record.
+
+What I didn’t like
+
+This paper was very statistic-heavy and somewhat inaccessible to me because I have a very limited background in these tests and how the authors drew conclusions from the models they made.  I also did not really like the format as one long article instead of splitting it into an analysis and then conclusions because it was hard to work through the analysis explanations and find where conclusions were made.  I think it also would have been useful if the authors had stated the specific data they used in the main body of the article instead of just saying it was marine data from Sepkoski’s data set and leaving the reader to find the specifics at the end of the article. 
+
+Figures
+
+I’m not entirely sure what data Figure 1 is reporting but 1a is a useful representation of how the rock record changes over time and the correlations observed between formation composition and reported extinction rate that led the authors to want to study these discrepancies.  Figure 2 is a useful visual for comparing the two different model analyses the authors conducted and is easier to understand than the written explanation of analysis and conclusions drawn.  Figure 3 demonstrates the null distributions calculated and how far from the distribution correlation coefficients were calculated. 
