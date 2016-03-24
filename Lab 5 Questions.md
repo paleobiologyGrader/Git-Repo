@@ -1,5 +1,7 @@
 ## Part 1
 
+> 20/20
+
 1)	What is Bivalve generic richness in the Miocene? What code did you use to find out?
 
 ````R
@@ -76,37 +78,63 @@ These values give a change in species richness of about 44% which is closer to t
 ## Part 2
 
 1)	Use the specnumber( ) function (also from the vegan package) to find Bivalve richness in the Miocene. What code did you use to find out?
+
+````R
 > specnumber(BivalveAbundance)
 Miocene 
    634
+````
 
 2)	Use the diversity( ) function to find the Gini-Simpson Index of Brachiopods during the Late Ordovician? What code did you use to find out?
+
+````R
 > diversity(BrachiopodAbundance["Late Ordovician",], index="simpson", MARGIN=1)
 [1] 0.9784588
+````
+
 3) Use the diversity( ) function to find the Shannon's Entropy of Bivalves during the Late Cretaceous? What code did you use to find out?
+
+````R
 > diversity(BivalveAbundance["Late Cretaceous",], index="shannon", MARGIN=1, base= exp(1))
 [1] 5.086654
+````
+
 4) Use the diversity( ) function to find the Shannon's Entropy of Bivalves during the Paleocene? What code did you use to find out?
+
+````R
 > diversity(BivalveAbundance["Paleocene",], index="shannon", MARGIN=1, base= exp(1))
 [1] 4.511875
-
+````
 
 ##Part 3
-Step1
+
+#### Step1
+
+````R
 > BivalveRich<- apply(BivalveAbundance,1,specnumber)
 > BrachRich<- apply(BrachiopodAbundance,1,specnumber)
+````
 
-Step2
+#### Step2
+
+````R
 > BivalveRich<- BivalveRich[c("Early Ordovician", "Middle Ordovician", "Late Ordovician", "Llandovery", "Wenlock", "Ludlow", "Pridoli", "Early Devonian", "Middle Devonian", "Late Devonian", "Mississippian", "Pennsylvanian", "Cisuralian", "Guadalupian","Lopingian","Early Triassic", "Middle Triassic", "Late Triassic", "Early Jurassic", "Middle Jurassic", "Late Jurassic", "Early Cretaceous", "Late Cretaceous","Paleocene", "Eocene", "Oligocene", "Miocene", "Pliocene", "Pleistocene")]
 > BrachRich<- BrachRich[c("Early Ordovician", "Middle Ordovician", "Late Ordovician", "Llandovery", "Wenlock", "Ludlow", "Pridoli", "Early Devonian", "Middle Devonian", "Late Devonian", "Mississippian", "Pennsylvanian", "Cisuralian", "Guadalupian","Lopingian","Early Triassic", "Middle Triassic", "Late Triassic", "Early Jurassic", "Middle Jurassic", "Late Jurassic", "Early Cretaceous", "Late Cretaceous","Paleocene", "Eocene", "Oligocene", "Miocene", "Pliocene", "Pleistocene")]
+````
 
-Step3
+#### Step3
 
 1)	Is brachiopod richness positively, negatively, or un-correlated with bivalve richness? Show your code?
+
+````R
 > cor(BivalveRich, BrachRich)
 [1] -0.567194
 They are moderately negatively correlated.
+````
+
 2) Is brachiopod biodiversity positively, negatively, or un-correlated with bivalve biodiversity when using the Gini-Simpson index? Show your code?
+
+````R
 > BivalveRich2<- diversity(BivalveAbundance, index="simpson", MARGIN=1)
 > BrachRich2<- diversity(BrachiopodAbundance, index="simpson", MARGIN=1)
 
@@ -115,14 +143,19 @@ They are moderately negatively correlated.
 
 > cor(BivalveRich2, BrachRich2)
 [1] -0.2355647
+````
 
 very loosely negatively correlated
-3) Looking just at changes in brachiopod richness through time, when did the greatest drop in brachiopod richness occur (i.e., between what two consecutive epochs)? 
- The greatest change in richness is between the Lopingian and Early Triassic epochs (406 to 63).
 
-##Part 4
+3) Looking just at changes in brachiopod richness through time, when did the greatest drop in brachiopod richness occur (i.e., between what two consecutive epochs)? 
+
+The greatest change in richness is between the Lopingian and Early Triassic epochs (406 to 63).
+
+## Part 4
 
 1)	Repeat the above steps, but for the BrachiopodAbundance community matrix. What is the standardized richness you got for brachiopods. Show your code.
+
+````R
 > SampleAbundances<-apply(BrachiopodAbundance,1,sum)
 > StandardizedRichness<-apply(BivalveAbundance,1,subsampleIndividuals,Quota=124)
 > BrachStandardizedRichness<- StandardizedRichness[c("Early Ordovician", "Middle Ordovician", "Late Ordovician", "Llandovery", "Wenlock", "Ludlow", "Pridoli", "Early Devonian", "Middle Devonian", "Late Devonian", "Mississippian", "Pennsylvanian", "Cisuralian", "Guadalupian", "Lopingian", "Early Triassic", "Middle Triassic", "Late Triassic", "Early Jurassic", "Middle Jurassic", "Late Jurassic", "Early Cretaceous", "Late Cretaceous", "Paleocene", "Eocene", "Oligocene", "Miocene", "Pliocene", "Pleistocene")]
@@ -139,8 +172,12 @@ very loosely negatively correlated
             65.27             72.68         78.04             		63.28             72.61 
         Oligocene           Miocene          Pliocene       Pleistocene 
             76.47             86.69             85.30             84.21
+````
+
 
 2)	How does the standardized brachiopod richness (previous question) compare to the unstandardized brachiopod richness from Problem Set 3? Show your code. Explain your reasoning. [Hint: Don't forget to put your biodiversities in temporal order]
+
+````R
 #The unstandardized brachiopod richness has much higher values than the standardized values. This is probably because the standardized values are based on a random sampling of a fixed number of brachiopods in the data set and each interval is sampled down to 124 individuals.
 > BrachRich-BrachStandardizedRichness
  Early Ordovician    Middle Ordovician   Late Ordovician        Llandovery           Wenlock 
@@ -155,12 +192,26 @@ very loosely negatively correlated
             45.73             52.32         17.96          		  -34.28            -15.61 
         Oligocene           Miocene          Pliocene       Pleistocene 
            -46.47            -41.69            -62.30            -65.21
-3) Make a scatter plot of standardized brachiopod richness versus standardized bivalve richness. Make a second scatter plot of unstandardized brachiopod richness versus unstandardized bivalve richness. Compare and contrast the two plots. What are the differences or similarities? Does standardizing or not standardizing matter? Show your code and explain your reasoning in detail. [Hint: If you forgot how to plot, revist the previous lab]
+````
+
+
+3) Make a scatter plot of standardized brachiopod richness versus standardized bivalve richness. Make a second scatter plot of unstandardized brachiopod richness versus unstandardized bivalve richness. Compare and contrast the two plots. What are the differences or similarities? Does standardizing or not standardizing matter? Show your code and explain your reasoning in detail. 
+
+````R
+[Hint: If you forgot how to plot, revist the previous lab]
 > plot(x=BrachStandardizedRichness, y=BivalveStandardizedRichness)
 > plot(x=BrachRich, y=BivalveRich)
+````
+
 Standardizing gives a plot that can be fitted with a linear trend line whereas the unstandardized Brachiopod richness vs. Bivalve Richness gives a plot that could be fit with a quadratic trend. Relationships are typically easier to analyze and deduce when there is a linear relationship to examine. The standardized data is also less clustered than the unstandardized data and would have a much better fit line.
+
+> I'm not quite sure what you are getting at here, trend-lines were not the point of hte question.
+
 3)	Do you believe that there is any evidence in these analyses to support the idea that bivalves outcompeted brachiopods over time? Explain your reasoning.
+
 According to both plots it does not appear that bivalves outcompeted brachiopods. After looking at the unstandardized data it appears that bivalves outcompete brachiopods because high values of bivalves correspond to low values of brachiopods but high levels of brachiopods appear to correspond to lower values of bivalve richness.  Since this data is not as reliably fit by a trend line it is better to look at the standardized data for this relationship. Looking at the standardized plot, there is no evidence of either species outcompeting the other because of the linear trend.  
+
+> Hmm... I think you are overestimating the importance of trend lines.
 
 <a href="url"><img src="raw.githubusercontent.com/jncarlson2/Git-Repo/master/Lab5Plots.pdf" align="center" height="500" width="500" ></a>
 
