@@ -1,0 +1,21 @@
+The effect of geographic range on extinction risk during background and mass extinction
+Payne and Finnegan
+
+Summary
+
+The authors summarize that there are three mass extinctions in which taxonomic diversity has decreased and has had an ecological effect on the composition of the environment.  There is no consistent cause for extinction events but there are consistent environmental effects. In this study, the authors looked at how geographic range impacts susceptibility to extinction. Benthic marine fossil occurrences in the PBDB were used to test the association between geographic range and survivorship. Using logistic regression, occurrences were subdivided into 10 million year intervals and assessed by geographic range and extinction rate. This multiple logistic regression model was used to evaluate the relationship between survivorship and geographic range because this model gets rid of confounding effects of species richness and the number of global occurrences. Range size and number of genera were also randomized so extinction did not depend on sampling and differences are real.  Odds ratios were compared based on occurrences, tectonic plates, global sea level, number of named formations, and the proportion of “range-through” genera. After excluding the three mass extinction events, all relationships were not statistically significant so the authors concluded that extinction events are correlated to geographic ranges because the odds-ratios are lowest in these time periods. The authors also concluded that extinction risk is also more sensitive to geographic range when per-plate extinction is low because the higher the number of extinctions per plate there are, the extinction rate is less dependent on range. A null model of endemic species extinction rates was then created to compare data.  The P-T, T-J, and K-T extinctions all deviated significantly from the null model with different causes due to climatic and respiratory changes in the environment. Some biases that the authors touch on are how restrictively distributed species have low sampling and so appear to go extinct sooner than species with broader ranges, background extinctions can affect plates, and the ecological tendency for the most abundant taxa to survive an extinction.
+
+What I liked
+
+I like how the authors described the statistical analysis in detail with equations but didn’t dive too in depth in the body of the article.  This helped the reader understand the exact manipulations and why the authors used these methods but was not distracting with jargon. I also liked how concise the introduction was and how the authors immediately dismissed findings that seems to be related to their study but that they would later refute.
+
+What I didn’t like
+
+I think this article would have benefited from having the Discussion section broken into smaller sections, for example having a section for each of the three mass extinctions detailed and having a section about any biases they discussed to occur in the fossil record. There also wasn’t much justification for why they used maria data other than because of relative abundance.
+
+Figures
+
+Figure 1 is a helpful timeline of the log-odds ratios for each period examined and the similarities between conducting a single regression versus multiple regression analysis. Table 1 is a useful summary of marine data used articles sometimes don’t include so I’m glad they had this summary available. Figure 2 clearly maps the relationship between geographic range and extinction intensity and divides data by era to show specific extinction events. Figure 3 shows the linear trend that appears when using log-odds regression analysis, confidence intervals to identify mass extinctions as significantly different from the null model, and is still color coded to distinguish time intervals examined.
+            
+        
+     
