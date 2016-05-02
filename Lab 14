@@ -1,0 +1,37 @@
+Problem Set 1
+
++Which taxon names appear most often? Print the top 20 taxa. 
+> orderedcounts<- counts[rev(order(counts[,"matches"])),]
+> orderedcounts[50:70,]
+       string matches
+5941     Limi     125
+14627   Hydro 124
+14614   Hydro 124
+2010      Ipi     119
+6401       My     114
+5506     Orth     111
+5480     Orth     111
+10580     Oti     108
+15001   Calca     104
+14580     Cin     104
+10148    Athe     104
+1488      Api     103
+8794      Aco     100
+628      Aphi      94
+10767   Raphi  93
+14648    Meta      92
+4938  Product  89
+1663     Argi      88
+14492 Articul      81
+5611  Articul      81
+1703    Stern      81
+#I truncated by 3 characters so there are a lot of matches so the first 50 taxa are not very accurrate.
+
++What are the commonly used or colloquial names for these 20 taxa, if any? (Look them up online if you need to.) 
+Some taxa listed are Productata, Articulata, Orthoptera 
+
++Which of these are probably not good data? Why? 
+They are all probably not good data because I truncated the taxa names too far. I had to scroll down the list to find long enough strings to match and with a high number of matches for the function so they may or may not be accurate.
+
++Conversely, which taxa are likely candidates for pyritization, and why?
+Taxa that have the highest number of matches when truncated to 1 or 2 will probably be more likely candidates for pyritization. So taxa with higher match numbers and a long enough string for the taxon name would be the best candidates for pyritization.
