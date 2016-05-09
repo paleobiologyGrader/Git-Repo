@@ -1,18 +1,21 @@
-Has the sixth mass extinction already arrived?
+> 10/10
 
-##Summary
+## Has the sixth mass extinction already arrived?
+
+## Summary
 
 The authors of this article aimed to compare current extinction rates of species to past mass extinctions in order to report if we are in a time of a mass extinction that is being driven by anthropogenic causes. Climate change, deforestation and fragmentation, and human influence on natural ecology have caused dramatic declines in many species which is also impacting the communities and systems they are a part of. Modern species have not been studied enough and there are not enough studies on the sampling of existing species to truly study ongoing extinction rates. Only about 2% of extant species have even been evaluated for extinction rates. So between biases in the fossil record and influences of formations and examination of fossils on the timing of extinction events, the fossil record is difficult to examine for extinction events. But then comparing these events with modern rates of extinction is also difficult. Mass extinctions are also now under revision since the three of the “Big Five” were actually decreases in origination; so only two of these events can be used for comparison to modern decreases of species density. Background rates of extinctions were also accounted for using fossil estimations spanning more than one million years and the overall pattern was applied to the past 50 thousand years since fossilization is not complete enough for organisms of these ages to be observed in the fossil record. Recent averages were compared to pre-anthropogenic averages to determine if species are indeed at risk of going extinct in a certain time bin. When combining rate and magnitude predictions, the authors concluded that based on past extinction events, the current state of examined species confirms conditions that match extinction events. By their predictions, species that are currently considered “critically endangered” and “threatened” are bound to go extinct in the next 1,000 to 2,500 years. “Endangered” and “vulnerable” species are also susceptible to tipping species loss to the greatest loss in biodiversity in history. Based on this rate, the authors conclude that the current rates of extinction due to anthropogenic effects are higher than rates of extinction during the examined mass extinctions and this accelerated rate has also been exacerbated by many environmental factors. For further study, the authors suggest standardizing rate, magnitude, taxonomic and geographic comparisons, greater observation of current species-clade relationships and the relationship between extinction selectivity and intensity.
 
-##What I liked
+## What I liked
 
 I liked that the authors acknowledged every possible source of error and bias they could for each section. It was very thorough, though in some places distracting. I also liked that they did not go in-depth on the statistics used since the point of this paper was to report extinction events, not necessarily the degree of severity of the current extinction event. Maybe another paper could look at the specific severity predicted for the current extinction.
 
-##What I didn’t like
+## What I didn’t like
 
 There were some sections where the descriptions of assumptions and caveats to the data cluttered up conclusions the authors were trying to make. These outlines also reduced the credibility of the data because there were so many specifications tagged onto the conditions applied to the data. I also think this study would have benefitted from being scaled down to less taxa and to species that are similar to modern species. One of the drawbacks that the authors emphasize is the lack of data on extant species extinction risks and how this biases the data so standardizing to similar species of the fossil record would account for this and make the study more manageable for the reader.
 
-##Figures
+> Many of your classmates felt similarly.
+
+## Figures
 
 Table 1 is a more effective summary of the “Big Five” than if the authors described them in the text because most readers will probably know about these events and can skip the box if they want. Box 1 is also a very useful summary of biases that arise when studying species extinctions and is easy to refer to instead of explaining throughout the text since these biases apply to most parameters examined in the article. Table 2 is also a useful summary of analysis techniques that the authors don’t necessarily describe but are important to understand in order to follow methods used by the authors. Figures 1, 2, and 3 compare extinction rates to time intervals, various species, and extinction magnitude. The descriptions are very lengthy but thoroughly explain the relationships observed and having a visual graph of general data helps the reader visualize the general trends the authors then dissect in the article.
-
