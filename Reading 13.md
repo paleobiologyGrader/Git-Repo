@@ -1,17 +1,19 @@
 Dinosaurs in decline tens of millions of years before their final extinction
 
-Summary
+> 10/10
+
+## Summary
 
 The authors of this paper argue that their tests on the Cretaceous-Paleogene boundary shows that dinosaurs actually declined in density long before the apparent mass extinction. Using a phylogenetic Bayesian approach, the authors looked at speciation and extinction rates. Theoretically, if speciation and extinction rates were constant through time, there would be a linear relationship between the two. If speciation rate decreased through time, then the relationship would reach an asymptote and turn down as extinction rates exceed speciation. The authors found that the latter situation was true when applying a Bayesian model to three phylogenetic trees and that this trend is found about 24 million years before the K-Pg extinction. Since dinosaurs are so diverse, model parameters took speciation differences in each subclade into account. Two subclades that only make up 14% of the dinosaur species did not experience any downturn in speciation but all other groups experiences a slowdown and then downturn of speciation. So in summary, dinosaurs were unable to replace extinction events beginning 24 million years before the K-Pg boundary. Sauropods experienced the greatest downturn because most lineages are not long-lasting. Theropods, birds and nonavian, follow a slower increase in speciation but gives way to an “early burst” speciation model that then experiences a speciation slowdown model. Ornithischians show a similar increase to theropods and their tough jaws and teeth gave them an advantage to eating angiosperms. Cretaceous dinosaurs are morphologically and ecologically conserved across this period but with increased provincialism, increased alpha diversity, and a radiation of niche occupation. The authors propose reasons for decreasing speciation throughout the Cretaceous period such as rising sea-levels, resulting fragmentation of land masses, and thus decreased range sizes. They recommend that future studies look at longer periods of time than the late Cretaceous to account for the downturn in speciation.         
 
-What I liked
+## What I liked
 
 I like that this article asserts a need for a closer examination of mass extinctions. We have been talking a lot about the unreliability of the rock record and how mass extinctions may be artifacts of biased sampling so the authors emphasize that looking at general speciation and extinction patterns over longer time is a better measure of extinction events. I also like how the authors broke down each clade and compared them to each other and then gave the explanations of niche occupation and land fragmentation as drivers of speciation rates.
 
-What I didn’t like
+## What I didn’t like
 
 I think there could have been a little more explanation in the main body of the article about where the data was collected from and why the authors chose to use the Bayesian model and why they used three major clades as opposed to breaking the data into smaller clades. I also think the paragraph about nonavian dinosaurs was distracting from the rest of the piece. Even though it is a relevant subset of data to analyze, it felt out of place and rushed.
 
-Figures
+## Figures
 
 Figure 1 helps the reader visualize the three theoretical models for the interaction of speciation and extinction rates and how each graph changes over time. Having a graph accompany the explanation of these theoretical results helps the reader interpret the descriptions easier. Figure 2 is a useful representation of how the three major clades examined by the authors fit the quadratic model that indicates speciation slowdown throughout the time periods examined. Figure 3 is an interesting way to represent how earlier species have a higher net speciation and how speciation dips “below zero” (or where extinction exceeds speciation) for each clade. Having all of the figures color coded really helps clarify trends for each clade.
