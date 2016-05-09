@@ -1,19 +1,22 @@
 The Red Queen and the Court Jester: Species Diversity and the Role of Biotic and Abiotic Factors Through Time
 Michael J. Benton
 
-Summary
+> Your points are fair, but overally this write-up seemed a bit light on detail for your like/dislike section.
+> 9/10
+
+## Summary
 
 The two major hypothetical models aiming to explain evolution are the Red Queen Hypothesis and the Court Jester Hypothesis.  The Red Queen model focuses on the importance of biotic competition within and between species and how these physical factors influence the co-evolution, diversity, and density of species.  The Court Jester model focuses on random events and abiotic factors as a source of diversification, evolution, and extinction.  Based on these two models, Benton proposes how species diversity would depend on certain factors. In the Red Queen model, diversity would depend on body size or adaptations whereas in the Court Jester model, diversity would depend on climate fluctuations and resource availability. Benton takes these two models as a base for assessing global patterns of diversity and assessing the merits of these two methodologies as well as a mixed methodology.
 In relation to global species diversity, the two models for predicting diversity are the equilibrium model and the expansion model. The equilibrium model follows the Red Queen hypothesis in that it emphasizes how extinction and origination events are due to  biotically driven density-dependence.  The expansion model follows a Court Jester hypothesis in that it uses carry capacities as drivers of density-dependent extinction and origination but since carrying capacity cannot be easily measured, Benton argues this model cannot be applied at a level lower than familia levels and does not hold as much merit.  So any new models for global diversity must incorporate biotic and abiotic contributions to density-dependence. Most studies of the rock record are on abiotic factors such as tectonic shifts, diet, temperature, latitude shifts, and dispersal and those influences on species diversification. Benton also emphasizes the importance of studying niche conservation and subdivision when examining ecospaces for diversity. Next, Benton looked at the timing of diversification in phylogenetic relationships between clades but trees are so incomplete with biotic substitutes and conflicting data from different disciplines makes these competition and diversity relationships difficult to elucidate. But with further investigation, Benton proposes that if clade relationships are coordinated to climatic and geographic changes then the Court Jester hypothesis would be an adequate model to explain global diversity but if diversification shifts are isolated to individual clades then the Red Queen model would dominate. Finally, when looking specifically at sister taxa relationships, Benton emphasizes that diversification is environmentally resource-driven so the Court Jester  model best explains species diversity on this broader scale.
 
-What I liked
+## What I liked
 
 I really liked this article since it was more ecology-based and since it looked equally at both models for explaining diversity as opposed to focusing on one.  Benton did a good job addressing how collected data from different studies and different disciplines can be used to contribute to each model. I also like that the paper followed a scale-out format, similar to how the two models are applied at different scales of taxonomic analysis. It was easier to read.
 
-What I didn’t like
+## What I didn’t like
 
 Sometimes I got lost while reading because some statements were generalized but overall I actually really liked this article. Examples of data that supported each model could have been explained more in-depth, such as any evidence or anecdotes as to why the key driver of extinction and origination events is density, would have helped round-out the argument.
 
-Figures
+## Figures
 
 Figures 1A and B really helped put all the metrics Benton was discussing into one visual and how variable values support different models. Figure 2 is possibly not necessary but is a nice addition for the reader to visualize sample spaces and the lack of bias between databases. Table 1 is very useful and a great resource of references to dive deeper into each model that helps the reader straighten out variable relationships to each model. Finally, Figure 3 is helpful because there are so many examples used by Benton that having a visual representation of how select variables are plotted and studied for species is helpful. 
