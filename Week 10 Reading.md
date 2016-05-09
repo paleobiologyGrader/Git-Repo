@@ -1,21 +1,24 @@
 Origination, extinction, and mass depletions of marine diversity
+
+> 10/10
                         
 Richard K. Bambach, Andrew H. Knoll, and Steve C. Wang
 
-Summary
+## Summary
 
 The authors of this paper question the definition of a mass extinction and the five extinctions that have been popularized by Raup and Sepkoski. The article starts with a summary of the analysis of the five extinctions and the criteria used for these definitions. However, the authors argue for a change in how mass extinctions are defined and the parameters examined to determine when an extinction event occurred. These three factors are continuity across time intervals in cause of extinction, continuity in taxonomic or ecological effect, and continuity of magnitude of graded diversity loss and gain.  The authors then examine the “big five” for diversity depletion between intervals and how these changes affected the overall ecosystem. The cut-off the authors use for defining a mass extinction is a 20% decrease in diversity, which all of the “big five” extinctions fit.  Next, the authors discuss the magnitude of the “recovery” phase after each event and then tested for continuity of the magnitude of extinction in order to compare the two values. If intervals show discontinuity in magnitude, effect, and cause between background and mass extinctions then the interval is set to be a mass extinction. Based on their analysis of these factors, the end-Ordovician, end-Permian, and end-Cretaceous extinctions are the only events that can qualify as mass extinction events. The effects and magnitudes seem to be similar for these three events but the authors conclude that there is not a common cause between these extinctions so there were no conclusions drawn about the causes of extinction but all three resulted from elevated extinction as opposed to depressed origination. So while the two other of the “big five” events exhibit diversity changes they do not have enough of a difference between intervals to be classified as mass extinctions.
 
-What I liked
+## What I liked
 
 This article was very thorough in looking at extinction events and any factors that could influence the definition of “mass extinction”.  The authors did a really good job of defining a mass extinction, the criteria for defining an extinction event and the factors that can influence the identification of an extinction. I also like that they not only described the specific time periods that they examined but also generalized their findings to look at the interaction between origination and extinction and how apparent diversity levels are influenced by these events. The authors also took a great step in explaining how the extinctions were all different from each other. It is important not only to look at when an event occurs and how diversity changes but at the kinds of fauna that survive and how an ecosystem overall changes. I also really like that the authors included figures summarizing data types and at each step of analysis to help visualize the trends that they were drawing conclusions from.
 
-What I didn’t like
+## What I didn’t like
 
 This article was very confusing because of the way that the authors jumped between time periods.  I found myself getting lost between knowing what time periods were being discussed at a given time and the statistical tests being done on the data.  It also would have been helpful to have a more detailed conclusion as to why the late-Frasnian and end-Triassic “extinctions” are not really mass extinctions.  Re-stating the tests done and why those two periods don’t fit the criteria set by the authors.  I’m also wondering if there is a justification for the authors using the criteria set by Wang (2003) for looking at continuity of cause, effect, and magnitude among extinction events instead of any other proposed criteria. 
 
+> I can see that, the authors did seem to rely a bit on the "fame" of some of these extinction events.
 
-Figures
+## Figures
 
 Figure 1 is a very clear representation of the general trends in marine diversity in the Phanerozoic. This sets up the time interval, extinctions that the authors are examining, and the fluctuations in diversity according to the fossil record. It is also helpful that they authors labeled the extinction events examined and showed genera turnover superimposed on the total number of genera.  Figure 2 is useful for visualizing how extreme a 20% decrease in genus diversity looks compared to other background fluctuations. Figure 3 dives into representing analysis of extinction events in each interval of the Phanerozoic and the extent of extinction at “mass extinction” boundaries. Table 1 gives the proportion of origination and extinction at each major interval to accompany Figure 4 which gives a visual representation of the proportion of extinction by interval. Having a table and figure are useful. Figure 5 is a nice representation of analysis of underlying bias of extinction magnitudes to confirm that only three of the five extinction events are true extinctions. Figure 6 is a great summary of the arguments the authors make for relating origination and extinction at these events and Table 2, Figure 7, and Figure 8 help to specify relationships in the three major extinctions and show why the late Frasnian and late Devonian are not classified as mass extinctions. Finally, taxonomic turnover in the Cambrian and early Ordovician are plotted in Figure 9 to give a visual representation for one of the characterizations of the effects of an extinction event. 
                 
