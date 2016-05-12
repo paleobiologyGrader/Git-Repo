@@ -9,6 +9,8 @@ The total biodiversity of each matrix is the gamma biodiversity.
 [1] 53
 ````
 
+> something is wrong with your data, but you did check it the correct way.
+
 2) What is the average biodiversity of all sample (stratigraphic units) in Ordovicianmatrix and SilurianMatrix? In the alpha, beta, and gamma ADDITIVE diveristy partitioning paradigm, does this number represent alpha, beta, or gamma biodiversity? Show your code.
 The average biodiversity of each matrix is the alpha biodiversity.
 ````R
